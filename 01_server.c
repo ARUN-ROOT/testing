@@ -28,7 +28,9 @@ int main()
   serveraddress.sin_family=AF_INET;
   serveraddress.sin_port=htons(8080);
   //serveraddress.sin_addr.s_addr=INADDR_ANY;
-  serveraddress.sin_addr.s_addr=inet_addr("192.168.1.121");
+ // serveraddress.sin_addr.s_addr=inet_addr("192.168.1.121");
+  serveraddress.sin_addr.s_addr=inet_addr("127.0.0.1");
+  
   
   // int bind(int sockfd, const struct sockaddr *addr,socklen_t addrlen);
   bind(sock_fd,(struct sockaddr*)&serveraddress,sizeof(serveraddress));
